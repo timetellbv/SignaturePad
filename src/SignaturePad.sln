@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.15
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignaturePad.iOS", "SignaturePad.iOS\SignaturePad.iOS.csproj", "{BEF71536-787B-431F-AC7F-A6469710D11F}"
 EndProject
@@ -16,6 +16,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignaturePad.UWP", "SignaturePad.UWP\SignaturePad.UWP.csproj", "{16131FDC-D50B-4EF2-8ECC-661184FF80DB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignaturePad.Forms.UWP", "SignaturePad.Forms.UWP\SignaturePad.Forms.UWP.csproj", "{6FC62387-6717-4577-A48B-D15848741F08}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignaturePad.Net.Android", "SignaturePad.Net.Android\SignaturePad.Net.Android.csproj", "{DCF4E29B-8A62-42D0-A349-518BCBE4F819}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignaturePad.Net.iOS", "SignaturePad.Net.iOS\SignaturePad.Net.iOS.csproj", "{782389C1-3EB1-41C2-8C5F-B9C5F82400A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{6FC62387-6717-4577-A48B-D15848741F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FC62387-6717-4577-A48B-D15848741F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FC62387-6717-4577-A48B-D15848741F08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCF4E29B-8A62-42D0-A349-518BCBE4F819}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCF4E29B-8A62-42D0-A349-518BCBE4F819}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCF4E29B-8A62-42D0-A349-518BCBE4F819}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCF4E29B-8A62-42D0-A349-518BCBE4F819}.Release|Any CPU.Build.0 = Release|Any CPU
+		{782389C1-3EB1-41C2-8C5F-B9C5F82400A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{782389C1-3EB1-41C2-8C5F-B9C5F82400A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{782389C1-3EB1-41C2-8C5F-B9C5F82400A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{782389C1-3EB1-41C2-8C5F-B9C5F82400A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

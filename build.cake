@@ -22,26 +22,30 @@ Task("libs")
 {
     var sln = IsRunningOnWindows() ? "./src/SignaturePad.sln" : "./src/SignaturePad.Mac.sln";
 
-    MSBuild(sln, new MSBuildSettings {
-        Verbosity = Verbosity.Minimal,
+    DotNetBuild(sln, new DotNetBuildSettings {
+        Verbosity = DotNetVerbosity.Minimal,
         Configuration = configuration,
-        PlatformTarget = PlatformTarget.MSIL,
-        MSBuildPlatform = MSBuildPlatform.x86,
-        ArgumentCustomization = args => args.Append("/restore"),
-        Properties = {
-            { "AssemblyVersion", new [] { majorVersion } },
-            { "Version", new [] { packageVersion } },
-        },
+        NoRestore = false,
+		MSBuildSettings = new DotNetMSBuildSettings(){
+			Properties = {
+				{ "AssemblyVersion", new [] { majorVersion } },
+				{ "Version", new [] { packageVersion } },
+			},
+		},
     });
 
     EnsureDirectoryExists("./output/android/");
+    EnsureDirectoryExists("./output/android-net/");
     EnsureDirectoryExists("./output/ios/");
+    EnsureDirectoryExists("./output/ios-net/");
     EnsureDirectoryExists("./output/uwp/");
     EnsureDirectoryExists("./output/uwp/Themes");
     EnsureDirectoryExists("./output/netstandard/");
 
     CopyFiles($"./src/SignaturePad.Android/bin/{configuration}/SignaturePad.*", "./output/android/");
     CopyFiles($"./src/SignaturePad.iOS/bin/{configuration}/SignaturePad.*", "./output/ios/");
+    CopyFiles($"./src/SignaturePad.Net.Android/bin/{configuration}/SignaturePad.*", "./output/android-net/");
+    CopyFiles($"./src/SignaturePad.Net.iOS/bin/{configuration}/SignaturePad.*", "./output/ios-net/");
     CopyFiles($"./src/SignaturePad.UWP/bin/{configuration}/SignaturePad.*", "./output/uwp/");
     CopyFiles($"./src/SignaturePad.UWP/bin/{configuration}/Themes/*", "./output/uwp/Themes");
 

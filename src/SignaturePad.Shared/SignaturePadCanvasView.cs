@@ -458,6 +458,7 @@ namespace Xamarin.Controls
 		/// <summary>
 		/// Allow the user to import an array of points to be used to draw a signature in the view, with new
 		/// lines indicated by a { 0, 0 } point in the array.
+		/// </summary>
 		/// <param name="loadedPoints"></param>
 		public void LoadPoints (NativePoint[] loadedPoints)
 		{
